@@ -16,21 +16,23 @@ fn main() {
     println!("3. Multiply");
     println!("4. Divide");
     let choice = get_number(">>> ");
+    // Adds a newline , for better appearance
+    println!("");
 
-    match choice {
-        1.0 => {
+    match choice as i32 {
+        1 => {
             let sum = add(&(number1, number2));
             println!("The sum is: {sum}");
         }
-        2.0 => {
+        2 => {
             let diff = subtract(&(number1, number2));
             println!("The differnece is: {diff}"); 
         }
-        3.0 => {
+        3 => {
             let product = multiply(&(number1, number2));
             println!("The product is: {product}")
         }
-        4.0 => {
+        4 => {
             let quotient = divide(&(number1, number2));
             match quotient {
                 f64::INFINITY => {
